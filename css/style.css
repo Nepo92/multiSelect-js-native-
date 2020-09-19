@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', 'sans-serif';
+  border: 1px solid;
+}
+
+.multiselect {
+  display: block;
+  position: relative;
+  width: 220px;
+  margin: 5vh auto;
+  cursor: pointer;
+}
+
+.multiselect:nth-child(4) {
+  margin-top: 50vh;
+}
+
+.multiselect.opened .multiselect__body {
+  display: block;
+}
+
+.multiselect .fas {
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  z-index: 1;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.multiselect__input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 35px;
+  padding: 0 25px 0 15px;
+  background-color: white;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.multiselect__placeholder {
+  pointer-events: none;
+}
+
+.multiselect__icon {
+  pointer-events: none;
+}
+
+.multiselect__choose {
+  position: relative;
+  padding: 2px 20px 2px 10px;
+  margin: 5px 5px 5px 0;
+  background-color: orange;
+  border-radius: 5px;
+}
+
+.multiselect__choose::before {
+  position: absolute;
+  top: 11px;
+  right: 5px;
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  content: '';
+  background-color: black;
+  transform: rotateZ(-45deg);
+}
+
+.multiselect__choose::after {
+  position: absolute;
+  top: 11px;
+  right: 5px;
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  content: '';
+  background-color: black;
+  transform: rotateZ(45deg);
+}
+
+.multiselect__body {
+  display: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  border: 1px solid;
+  border-top: none;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.multiselect__list {
+  height: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: white;
+}
+
+.multiselect__item {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  padding: 0 15px;
+  margin: 0;
+  border-bottom: 1px solid;
+}
+
+.multiselect__item:last-child {
+  border-bottom: none;
+}
+
+.multiselect__item:hover {
+  color: white;
+  background-color: gray;
+}
+
+@supports (-webkit-appearance:none){
+
+}
