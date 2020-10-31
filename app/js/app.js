@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 const template = (data = [], placeholder) => {
   const text = placeholder ?? '';
   const items = data.map((item) => {
@@ -89,10 +88,8 @@ export default class multiSelect {
     /* Добавляем элемент */
     this.multiSelectInput.appendChild(this.elem);
 
-    /* Вносим в эемент текст выбранного айтема */
+    /* Вносим в элемент текст выбранного айтема */
     this.elem.innerHTML = event.target.textContent;
-
-    console.log(this.chooseitems); // Выбор до редактирования
   }
 
   delChoose(event) {
